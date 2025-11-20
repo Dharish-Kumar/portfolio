@@ -73,7 +73,7 @@ header{
     background-color: var(--default-colour), 5;
     backdrop-filter: blur(15px);
     /* backdrop-filter: blur(5px); */
-    width:60%;
+    width:70%;
     border-radius:50px;
     border:1px solid lightgrey;
     padding:0;
@@ -131,10 +131,10 @@ header{
     color: var(--default-colour) !important;
 }
 .navbar-toggler{
-    border: none;
-    box-shadow: 0px 3px 6px #d5d5d5;
+    border: none !important;
+    box-shadow: 0px 1px 3px var(--bg-secondary-light-colour);
     position: fixed;
-    top: 2%;
+    top: 12%;
     right: 6%;
     padding: 5px 12px;
     border-radius: 9px;
@@ -158,34 +158,6 @@ header{
     width:40%;
     padding-top:10%;
 }
-.profile_pic::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    border-radius: 50%;
-    background: conic-gradient(
-        #ff0000,
-        #ff7f00,
-        #ffff00,
-        #00ff00,
-        #00ffff,
-        #0000ff,
-        #8a2be2,
-        #ff00ff,
-        #ff0000
-    );
-    filter: blur(15px);
-    animation: rotateGlow 4s linear infinite;
-    opacity: 0.8;
-    z-index: -1;
-}
-@keyframes rotateGlow {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
 .profile_pic{
     width: 200px;
     height: 200px;
@@ -197,22 +169,24 @@ header{
     height: 100%;
     border-radius: 50%;
     display: block;
-    filter: grayscale(80%);
+    filter: grayscale(100%);
+    scale: 1;
+    transition: 0.4s;
+    animation: floatImg 3s ease-in-out infinite;
+    position: relative;
+}
+@keyframes floatImg {
+    0% { transform: translateY(0px) scale(1); left:0px; top:0px}
+    25% { transform: translateY(0px) scale(1.01); left:10px; top:0px}
+    50% { transform: translateY(-6px) scale(1.02); left:10px; top:10px;}
+    75% { transform: translateY(-6px) scale(1.01); left:0px; top:10px;}
+    100% { transform: translateY(0px) scale(1); left:0px; top:0px;}
 }
 .profile_pic img:hover,
 .profile_pic img:focus{
-    filter: grayscale(40%);
+    filter: grayscale(0%);
 }
-@keyframes rainbowGlow {
-    0%   { box-shadow: 0 0 50px #ff0000; }   /* Red */
-    14%  { box-shadow: 0 0 50px #ff7f00; }   /* Orange */
-    28%  { box-shadow: 0 0 50px #ffff00; }   /* Yellow */
-    42%  { box-shadow: 0 0 50px #00ff00; }   /* Green */
-    57%  { box-shadow: 0 0 50px #0000ff; }   /* Blue */
-    71%  { box-shadow: 0 0 50px #4b0082; }   /* Indigo */
-    85%  { box-shadow: 0 0 50px #8f00ff; }   /* Violet */
-    100% { box-shadow: 0 0 50px #ff0000; }   /* Back to Red */
-}
+
 .hero_content a{
     text-decoration: none;
 }
@@ -296,6 +270,7 @@ header{
 }
 .sm_icon i{
     font-size: 18px;
+    color: var(--secondary-colour);
 }
 .sm_icon:nth-child(4) i{
     font-size: 22px !important;
@@ -344,40 +319,19 @@ header{
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
-    margin:20px 0px;
+    margin:20px 0 80px 0;
     font-weight: 600;
 }
-.worksEP{
-    margin:20px 0px;
-    padding:10px 0px;
+
+.tilt-wrapper {
+    display: inline-block;
+    perspective: 800px;  /* required for realistic 3D tilt */
+    cursor:pointer;
+    transition: 0.4s;
+}
+.tilt-wrapper img{
     width:100%;
-    height:auto;
-}
-.scroll_items{
-    width:100%;
-    height:75vh;
-    overflow-y: auto;
-    position: relative;
-    scrollbar-width: 0px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-.scroll_items img{
-    width:60%;
-    position: sticky;
-    top:0;
-    transition: 1s;
-    margin:20px 0px;
-}
-.scroll_items img:nth-child(2) {
-    top:40px;
-}
-.scroll_items img:nth-child(3) {
-    top:80px;
-}
-.scroll_items img:nth-child(4) {
-    top:120px;
+    margin-bottom:20px;
 }
 
 /* ========== caurosel style ========== */
@@ -458,7 +412,7 @@ header{
     font-weight: 600;
 }
 #visualD_projects h1>span {
-    color: gray;
+    color: var(--primary-colour);
 }
 
 /* ========== MobleUI style ========== */
@@ -584,17 +538,64 @@ header{
     color: gray;
 }
 
+/* ========== Footer style ========== */
+
 #tanhksSec{
-    background: var(--secondary-colour);
+    background: url("../img/footer_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     padding:100px 0px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#tanhksSec h1{
-    font-size: 42px;
-    text-align: center;
+.socialMedia{
+    margin: 10px 0;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    cursor:pointer;
+}
+.socialMedia a{
+    text-decoration: none;
+}
+.socialMedia a i{
     color: var(--default-colour);
-    margin:0px 0 50px 0;
-    font-weight: 600;
-    text-align: center;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 1px solid var(--default-colour);
+    background-color: transparent;
+    width:45px;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.socialMedia a i:hover{
+    background-color: var(--default-colour);
+    color: var(--secondary-colour);
+}
+.QuickContact{
+    display:flex;
+    flex-direction: row;
+    gap:40px;
+    margin:20px 0;
+    justify-content: center;
+    align-items: center;
+}
+.QuickContact a{
+    color:var(--default-colour);
+    text-decoration: none;
+    cursor:pointer;
+}
+.QuickContact a>span{
+    font-weight: 200 !important;
 }
 
 
@@ -616,7 +617,7 @@ header{
 } */
 @media screen and (min-width:1520px) and (max-width:1899px){
         header{
-            width:50%;
+            width:70%;
         }
         .hero_content{
             width:45%;
@@ -645,7 +646,7 @@ header{
 }
 @media screen and (min-width:1360px) and (max-width:1519px){
         header{
-            width:60%;
+            width:80%;
         }
         .hero_content{
             width:50%;
@@ -690,6 +691,20 @@ header{
 @media screen and (min-width:1200px) and (max-width:1359px){
         header{
             width:70%;
+        }
+        .navbar .logo {
+            width: 25%;
+        }
+        .navbar .menuList {
+            width: 73%;
+        }
+        .navbar .logo h2 {
+            margin: 0 0 0 20px;
+            font-size: 24px;
+        }
+        .nav-link{
+            padding:2px 10px !important;
+            font-size: 15px !important;
         }
         .hero_content{
             width:60%;
@@ -736,7 +751,21 @@ header{
 }
 @media screen and (min-width:992px) and (max-width:1199px){
         header{
-            width:77%;
+            width:80%;
+        }
+        .navbar .logo {
+            width: 25%;
+        }
+        .navbar .menuList {
+            width: 73%;
+        }
+        .navbar .logo h2 {
+            margin: 0 0 0 20px;
+            font-size: 24px;
+        }
+        .nav-link{
+            padding:2px 10px !important;
+            font-size: 15px !important;
         }
         .hero_content{
             padding-top:20%;
@@ -796,10 +825,27 @@ header{
 
 @media screen and (min-width:787px) and (max-width:991px){
         header{
-            width:90%;
+            width: 92%;
+            border-radius: 50px;
+        }
+        .navbar .logo {
+            width: 20%;
+        }
+        .navbar .menuList {
+            width: 78%;
+        }
+        .navbar .logo h2 {
+            margin: 0 0 0 20px;
+            font-size: 18px;
         }
         .nav-link{
-            padding:10px 10px !important;
+            padding:0px 10px !important;
+            font-size: 14px !important;
+        }
+        .profile_pic {
+            width: 180px;
+            height: 180px;
+            margin-top: 30px;
         }
         .hero_content{
             padding-top:20%;
@@ -865,15 +911,31 @@ header{
 }
 @media screen and (min-width:567px) and (max-width:786px){
         header{
-            width:90%;
+            width: 98%;
+            border-radius: 50px;
+        }
+        .navbar .logo {
+            width: 20%;
+        }
+        .navbar .menuList {
+            width: 78%;
+        }
+        .navbar .logo h2 {
+            margin: 0 0 0 20px;
+            font-size: 18px;
         }
         .nav-link{
-            padding:5px 10px !important;
-            font-size: 14px !important;
+            padding:0px 10px !important;
+            font-size: 12px !important;
         }
         .hero_content{
             padding-top:18%;
             width:90%;
+        }
+        .profile_pic {
+            width: 180px;
+            height: 180px;
+            margin-top: 30px;
         }
         .hero_content h1 {
             font-size: 32px;
@@ -962,19 +1024,22 @@ header{
         #experience h1 {
             font-size: 28px;
         }
-        #testimonial h1 {
-            font-size: 28px;
+        .QuickContact{
+            flex-direction: column;
+            gap:30px;
+            margin-top:70px;
         }
         #tanhksSec{
-            padding:50px 0;
+            padding:70px 0;
         }
 }
 @media screen and (max-width:566px){
     header{
-        width: 100%;
-        border-radius: 5px;
-        background: transparent;
-        box-shadow: none;
+        width: 90%;
+        border-radius: 50px;
+    }
+    .navbar .logo h2 {
+        margin: 0 0 0 20px;
     }
     .navbar{
         justify-content: end;
@@ -989,19 +1054,26 @@ header{
         border-radius: 15px;
     }
     .navbar ul {
-        width: 90%;
-        margin-top: 14%;
+        width: 50%;
         background: var(--default-colour);
         border-radius: 20px;
         float: right;
-        margin-right: 5%;
-        box-shadow: 0px 3px 6px #ececec;
+        position: absolute;
+        right: 0;
+        margin-top: 7%;
+        padding: 20px 0px;
+        box-shadow: 0px 0px 10px var(--bg-secondary-light-colour);
     }
     .active {
         background: var(--primary-colour) !important;
-        border-radius: 15px;
-        color: var(--secondary-colour) !important;
+        border-radius: 50px;
+        color: var(--default-colour) !important;
         font-weight: 400 !important;
+    }
+    .profile_pic {
+        width: 180px;
+        height: 180px;
+        margin-top: 30px;
     }
     .pf_btn2{
         font-size: 13px;
@@ -1094,13 +1166,12 @@ header{
     #experience h1 {
         font-size: 24px;
     }
-    #testimonial h1 {
-        font-size: 24px;
-    }
     #tanhksSec{
-        padding:50px 0;
+        padding:70px 0;
     }
-    #tanhksSec h1{
-        font-size: 28px;
+    .QuickContact{
+        flex-direction: column;
+        gap:30px;
+        margin-top:70px;
     }
 }

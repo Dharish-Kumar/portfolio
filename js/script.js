@@ -46,11 +46,7 @@ navLinks.forEach(link => {
 
 
 
-
-
-
-
-
+// ======== MockUI -=======
 
 const imgList = document.getElementById("imgList");
 const scrollRight = document.getElementById("scroll-right");
@@ -77,5 +73,32 @@ window.addEventListener("resize", () => {
   imgList.scrollTo({ left: 0, behavior: "smooth" });
 });
 
+
+// ======== works -=======
+
+document.querySelectorAll('.tilt-wrapper').forEach(wrapper => {
+    const card = wrapper;
+
+    wrapper.addEventListener('mousemove', (e) => {
+        const rect = wrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Convert values to -1 to +1 range
+        const rotateY = ((x / rect.width) - 0.4) * 40;  // left-right tilt
+        const rotateX = ((y / rect.height) - 0.4) * -40; // top-bottom tilt
+
+        // Apply full 4-corner tilt
+        card.style.transform = `
+            rotateX(${rotateX}deg) 
+            rotateY(${rotateY}deg)
+            translateZ(10px)
+        `;
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+        card.style.transform = "rotateX(0deg) rotateY(0deg) translateZ(0)";
+    });
+});
 
 
