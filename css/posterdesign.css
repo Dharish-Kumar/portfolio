@@ -1,0 +1,147 @@
+.for_BG{
+    background-color: #000000 !important;
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+.posterDesignPage header{
+    width:100%;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    display: block;
+    padding:20px 0;
+    margin: 0;
+}
+.posterDesignPage header a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+
+.PosterDesignWorks{
+    margin: 0;
+    padding:20px 0;
+}
+.PosterDesignWorks h2{
+    text-align: center;
+    margin:20px 0;
+    padding:20px 0;
+    color:#ffffff;
+}
+.PosterDesignWorks .postersection{
+    margin:40px 0;
+    padding:10px 0;
+}
+.bannersection{
+    margin:40px 0;
+}
+.poster1{
+    width:100%;
+    height:400px;
+    overflow-y: hidden;
+    background-color: #9f9f9f;
+    border-radius: 20px;
+}
+.poster1 img{
+    width:100%;
+}
+.BannerDesogn{
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    background-color: transparent;
+    border-radius: 30px;
+    margin:10px 0;
+}
+.BannerDesogn img{
+    width:100%;
+}
+.Nextproject{
+    width:100%;
+    display: flex;
+    justify-content: end;
+}
+.Nextproject a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+
+
+.modal{
+    background: #0000009c !important;
+}
+.modal img{
+    width:100%;
+    border-radius: 20px;
+}
+.modal-dialog{
+    max-width:750px !important;
+}
+.modal-body{
+    padding:0px !important;
+}
+.modal-content{
+    background: transparent !important;
+    border:none !important;
+}
+.modal-header{
+    border:none !important;
+    padding:20px 5px !important;
+}
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+.btn-close{
+    background: url("../img/xmark-solid-full.svg") !important;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width:1360px) and (max-width:1519px){
+    .poster1 {
+        height: 330px;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1359px){
+    .poster1 {
+        height: 300px;
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+    .poster1 {
+        height: 280px;
+    }
+    .BannerDesogn{
+        border-radius: 25px;
+    }
+}
+@media screen and (min-width:787px) and (max-width:991px){
+    .poster1 {
+        height: 200px;
+    }
+    .BannerDesogn{
+        border-radius: 20px;
+    }
+}
+@media screen and (min-width:567px) and (max-width:786px){
+    .poster1 {
+        height: 300px;
+        margin:10px 0;
+    }
+    .BannerDesogn{
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width:566px){
+    .poster1 {
+        height: 330px;
+        margin:10px 0;
+    }
+    .BannerDesogn{
+        border-radius: 15px;
+    }
+}
