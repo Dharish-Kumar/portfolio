@@ -3,7 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&display=swap');
 @import url(posterdesign.css);
-@import url(bannerdesign.css);
 :root{
     --primary-colour: #2081e3;
     --secondary-colour: #000000;
@@ -288,7 +287,7 @@ header{
     align-items: center;
     margin:50px auto;
 }
-.about_content h1{
+.about_content h2{
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
@@ -317,7 +316,7 @@ header{
     padding:50px 0px;
     
 }
-.worksCS h1{
+.worksCS h2{
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
@@ -406,14 +405,14 @@ header{
 #imgList img:hover {
   transform: scale(1.05);
 }
-#visualD_projects h1 {
+#visualD_projects h2 {
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
     margin:0 0 50px 0;
     font-weight: 600;
 }
-#visualD_projects h1>span {
+#visualD_projects h2>span {
     color: var(--primary-colour);
 }
 
@@ -423,7 +422,7 @@ header{
     margin: 30px 0px;
     padding: 30px 0;
 }
-.MockupUI h1 {
+.MockupUI h2 {
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
@@ -459,7 +458,7 @@ header{
     margin: 100px auto;
     width:50%;
 }
-#experience h1{
+#experience h2{
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
@@ -512,7 +511,7 @@ header{
     margin:100px auto;
     padding:50px 0;
 }
-#testimonial h1{
+#testimonial h2{
     font-size: 42px;
     text-align: center;
     color: var(--secondary-colour);
@@ -542,7 +541,7 @@ header{
 
 /* ========== Footer style ========== */
 
-#tanhksSec{
+#contact{
     background: url("../img/footer_bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -630,10 +629,10 @@ header{
         .about_content{
             width:50%;
         }
-        .about_content h1 {
+        .about_content h2 {
             font-size: 42px;
         }
-        .worksCS h1 {
+        .worksCS h2 {
             font-size: 42px;
         }
         .scroll_items img{
@@ -659,10 +658,10 @@ header{
         .about_content{
             width:50%;
         }
-        .about_content h1 {
+        .about_content h2 {
             font-size: 42px;
         }
-        .worksCS h1 {
+        .worksCS h2 {
             font-size: 42px;
         }
         .scroll_items img{
@@ -674,19 +673,19 @@ header{
         .scroll_items img{
             margin:15px;
         }
-         #visualD_projects h1 {
+         #visualD_projects h2 {
             font-size: 42px;
         }
-        .MockupUI h1 {
+        .MockupUI h2 {
             font-size: 42px;
         }
-        #experience h1 {
+        #experience h2 {
             font-size: 42px;
         }
-        #testimonial h1 {
+        #testimonial h2 {
             font-size: 42px;
         }
-        #tanhksSec h1{
+        #contact h2{
             font-size: 42px;
         }
 }
@@ -717,10 +716,10 @@ header{
         .about_content{
             width:60%;
         }
-        .about_content h1 {
+        .about_content h2 {
             font-size: 40px;
         }
-        .worksCS h1 {
+        .worksCS h2 {
             font-size: 40px;
         }
         .scroll_items img{
@@ -732,22 +731,22 @@ header{
         .scroll_items img{
             margin:10px;
         }
-         #visualD_projects h1 {
+         #visualD_projects h2 {
             font-size: 40px;
         }
-        .MockupUI h1 {
+        .MockupUI h2 {
             font-size: 40px;
         }
         .mockupImage img{
             width:280px;
         }
-        #experience h1 {
+        #experience h2 {
             font-size: 40px;
         }
-        #testimonial h1 {
+        #testimonial h2 {
             font-size: 40px;
         }
-        #tanhksSec h1{
+        #contact h2{
             font-size: 40px;
         }
 }
@@ -791,10 +790,10 @@ header{
         .scroll_items img{
             margin:10px;
         }
-         #visualD_projects h1 {
+         #visualD_projects h2 {
             font-size: 36px;
         }
-        .MockupUI h1 {
+        .MockupUI h2 {
             font-size: 32px;
         }
         .mockupImage img{
@@ -811,16 +810,16 @@ header{
         .cpmany_logo img{
             width:120px;
         }
-        #experience h1 {
+        #experience h2 {
             font-size: 32px;
         }
-        #testimonial h1 {
+        #testimonial h2 {
             font-size: 32px;
         }
-        #tanhksSec{
+        #contact{
             padding:70px 0;
         }
-        #tanhksSec h1{
+        #contact h2{
             font-size: 32px;
         }
 }
@@ -859,13 +858,13 @@ header{
         .about_content{
             width:80%;
         }
-        .about_content h1 {
+        .about_content h2 {
             font-size: 32px;
         }
         .skill_tools{
             gap:20px;
         }
-        .worksCS h1 {
+        .worksCS h2 {
             font-size: 32px;
         }
         .scroll_items img{
@@ -877,10 +876,10 @@ header{
             height:auto;
             overflow-y: unset;
         }
-         #visualD_projects h1 {
+         #visualD_projects h2 {
             font-size: 32px;
         }
-        .MockupUI h1 {
+        .MockupUI h2 {
             font-size: 32px;
              margin: 0 0 50px 0;
         }
@@ -898,16 +897,16 @@ header{
         .cpmany_logo img{
             width:120px;
         }
-        #experience h1 {
+        #experience h2 {
             font-size: 32px;
         }
-        #testimonial h1 {
+        #testimonial h2 {
             font-size: 32px;
         }
-        #tanhksSec{
+        #contact{
             padding:50px 0;
         }
-        #tanhksSec h1{
+        #contact h2{
             font-size: 28px;
         }
 }
@@ -966,7 +965,7 @@ header{
         .about_content{
             width:80%;
         }
-        .about_content h1 {
+        .about_content h2 {
             font-size: 32px;
         }
         .skill_tools{
@@ -979,7 +978,7 @@ header{
             margin:0;
             padding: 20px 0px;
         }
-        .worksCS h1 {
+        .worksCS h2 {
             font-size: 32px;
         }
        .scroll_items img{
@@ -1002,10 +1001,10 @@ header{
         #imgList{
             gap: 0;
         }
-         #visualD_projects h1 {
+         #visualD_projects h2 {
             font-size: 28px;
         }
-        .MockupUI h1 {
+        .MockupUI h2 {
             font-size: 28px;
              margin: 0 0 50px 0;
         }
@@ -1023,7 +1022,7 @@ header{
         .cpmany_logo img{
             width:100px;
         }
-        #experience h1 {
+        #experience h2 {
             font-size: 28px;
         }
         .QuickContact{
@@ -1031,7 +1030,7 @@ header{
             gap:30px;
             margin-top:70px;
         }
-        #tanhksSec{
+        #contact{
             padding:70px 0;
         }
 }
@@ -1108,7 +1107,7 @@ header{
     .about_content{
         width:80%;
     }
-    .about_content h1 {
+    .about_content h2 {
         font-size: 28px;
     }
     .skill_tools{
@@ -1121,7 +1120,7 @@ header{
         margin:0;
         padding: 20px 0px;
     }
-    .worksCS h1 {
+    .worksCS h2 {
         font-size: 28px;
     }
     .scroll_items img{
@@ -1144,10 +1143,10 @@ header{
     #imgList{
         gap: 0;
     }
-    #visualD_projects h1 {
+    #visualD_projects h2 {
         font-size: 24px;
     }
-    .MockupUI h1 {
+    .MockupUI h2 {
         font-size: 24px;
         margin: 0 0 50px 0;
     }
@@ -1165,10 +1164,10 @@ header{
     .cpmany_logo img{
         width:100px;
     }
-    #experience h1 {
+    #experience h2 {
         font-size: 24px;
     }
-    #tanhksSec{
+    #contact{
         padding:70px 0;
     }
     .QuickContact{

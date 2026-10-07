@@ -25,7 +25,10 @@
     margin: 0;
     padding:20px 0;
 }
-.PosterDesignWorks h2{
+.PosterDesignWorks h1{
+    font-size: calc(1.325rem + .9vw);
+    font-weight: 500;
+    line-height: 1.2;
     text-align: center;
     margin:20px 0;
     padding:20px 0;
@@ -62,7 +65,7 @@
 .Nextproject{
     width:100%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 .Nextproject a{
     text-decoration: none;
@@ -144,4 +147,36 @@
     .BannerDesogn{
         border-radius: 15px;
     }
+}
+
+@media (min-width: 1200px){
+    .PosterDesignWorks h1{
+        font-size: 2rem;
+    }
+}
+
+/* ========== Case study page (sliced images) ========== */
+
+.caseStudySlices{
+    max-width: 1200px;
+    margin: 20px auto 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #07071a;
+}
+.caseStudySlices img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.sr-only-title{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

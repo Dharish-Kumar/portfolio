@@ -30,6 +30,7 @@ window.addEventListener("scroll", () => {
 // Click-based active menu highlight + close mobile menu
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
+    if (!navCollapse) return;
 
     // 1. Update active class on click
     navLinks.forEach(l => l.classList.remove("active"));
@@ -37,9 +38,9 @@ navLinks.forEach(link => {
 
     // 2. Auto-close mobile navbar
     if (window.innerWidth < 992) { // close only in mobile/tablet
-      const collapse = new bootstrap.Collapse(navCollapse, {
-        toggle: true
-      });
+      if (navCollapse.classList.contains("show")) {
+        bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
+      }
     }
   });
 });
@@ -51,6 +52,8 @@ navLinks.forEach(link => {
 const imgList = document.getElementById("imgList");
 const scrollRight = document.getElementById("scroll-right");
 const scrollLeft = document.getElementById("scroll-left");
+
+if (imgList && scrollRight && scrollLeft) {
 
 // Get the width of a single image (first <li>)
 function getImageWidth() {
@@ -72,6 +75,8 @@ scrollLeft.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   imgList.scrollTo({ left: 0, behavior: "smooth" });
 });
+
+}
 
 
 // ======== works -=======
